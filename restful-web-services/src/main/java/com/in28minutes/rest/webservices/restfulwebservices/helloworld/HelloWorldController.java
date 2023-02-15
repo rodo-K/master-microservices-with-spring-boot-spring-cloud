@@ -21,4 +21,15 @@ public class HelloWorldController {
 	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
 		return new HelloWorldBean(String.format("Hello World, %s", name));
 	}
+	
+	// So REST API is all about resources and the actions(request methods)
+	// we can perform on those resources
+	
+	// GET: Retrieve detail of a resource
+	// POST: Create a new resource
+	// PUT: Update an existing resource
+	// PATCH: Update part of a resource
+	// DELETE: Delete a resource
+	
+	
 }
