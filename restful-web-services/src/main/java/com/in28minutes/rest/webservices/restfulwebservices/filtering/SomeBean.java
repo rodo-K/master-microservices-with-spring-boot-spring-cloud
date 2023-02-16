@@ -1,13 +1,13 @@
 package com.in28minutes.rest.webservices.restfulwebservices.filtering;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonFilter;
 
-@JsonIgnoreProperties("field1")
+//@JsonIgnoreProperties("field1")
+@JsonFilter(value = "SomeBeanFilter")
 public class SomeBean {
 	private String field1;
 	
-	@JsonIgnore
+	//@JsonIgnore
 	private String field2;
 	private String field3;
 	
@@ -17,6 +17,7 @@ public class SomeBean {
 		this.field2 = field2;
 		this.field3 = field3;
 	}
+	
 	public String getField1() {
 		return field1;
 	}
