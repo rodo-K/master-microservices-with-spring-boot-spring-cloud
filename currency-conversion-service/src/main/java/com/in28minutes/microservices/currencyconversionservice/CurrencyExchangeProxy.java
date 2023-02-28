@@ -11,7 +11,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.in28minutes.microservices.currencyconversionservice.bean.CurrencyConversion;
 
-@FeignClient(name="currency-exchange", url="localhost:8000" )
+//@FeignClient(name="currency-exchange", url="localhost:8000" )
+// Achieve load balancing between instances - by removing the url
+@FeignClient(name="currency-exchange")
 public interface CurrencyExchangeProxy {
 	
 	// The structure of the method should match the structure of the response. 
